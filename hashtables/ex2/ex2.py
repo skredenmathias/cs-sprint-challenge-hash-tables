@@ -17,56 +17,49 @@ def reconstruct_trip(tickets, length):
     """
     YOUR CODE HERE
     """
-    first_ticket = False
-    last_ticket = False
     final_route = []
     cache = {}
-    
-    if Ticket.source = None:
-        first_ticket = True
-    
-    if Ticket.destination = True:
-        last_ticket = True
+    counter = 0
 
     for ticket in tickets:
-        cache[Ticket.source] = Ticket.destination
+        if ticket.source == 'NONE':
+            final_route.append(ticket.destination)
 
-    for source, destination in cache.items():
-        if destination == source:
-
-    key_list = list(cache.keys())
+    for ticket in tickets:
+        cache[ticket.source] = ticket.destination
 
     while len(final_route) != length:
-        key = random.choice(list(cache.keys()))
+        for key, value in cache.items():
+            if final_route[counter] == key:
+                final_route.append(value)
+                counter += 1
 
+    return final_route
 
-
-    return route
-
-
-def random_sentences():
-    sentence = ''
-    for i in range(5):
-        key = random.choice(list(cache.keys()))
-        # for key, value in cache.items():
-        for i in range(15):
-            # sentence = ''
-            sentence += key
-            sentence += ' '
-            # sentence += random.choice(value)
-            sentence += ' '
-            key = random.choice(cache[key])
-    return sentence
-
-    cache = {}
-    # prev = None
-    # for word in words.split():
-    for i in range(len(words)):
-        word = words[i]
-        # TODO: analyze which words can follow other words
-        if word not in cache:
-            if i+1 in range(len(words)):
-                cache[word] = [words[i+1]]
-        else:
-            if i+1 in range(len(words)):
-                cache[word].append(words[i+1])
+# DCA
+# DCA
+# PDX
+# DCA
+# NONE
+# DCA
+# DCA
+# NONE
+# PDX
+# DCA
+# NONE
+# NONE
+# DCA
+# DCA
+# PDX
+# DCA
+# DCA
+# NONE
+# NONE
+# NONE
+# DCA
+# PDX
+# DCA
+# PDX
+# DCA
+# DCA
+# DCA

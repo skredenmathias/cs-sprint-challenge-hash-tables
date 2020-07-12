@@ -6,26 +6,23 @@
 
 # The lists can contain up to roughly 1,000,000 elements each.
 
-
-
-
-
 def intersection(arrays):
-
-    # loop through each list in list
-        #   if number not in cache, store it = count
-        #   if in cache, store it += 1
-        #   return cache.values that match number of lists
     result = {}
-    print(len(arrays))
-    for arr in arrays:
+    array_length = 0
+    result_arr = []
+
+    for arr in arrays: # 100003 x 3
         for element in arr:
             if element not in result:
                 result[element] = 1
             else:
                 result[element] += 1
+        array_length += 1
 
-    # return result
+    for key, value in result.items():
+        if value == array_length:
+            result_arr.append(key)
+    return result_arr
 
 
 if __name__ == "__main__":

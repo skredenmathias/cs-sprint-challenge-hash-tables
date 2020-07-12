@@ -25,6 +25,30 @@ def get_indices_of_item_weights(weights, length, limit):
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         
