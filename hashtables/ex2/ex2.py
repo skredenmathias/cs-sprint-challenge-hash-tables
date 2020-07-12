@@ -1,17 +1,9 @@
-#  Hint:  You may not need all of these.  Remove the unused functions.
+import random
+
 class Ticket:
     def __init__(self, source, destination):
-        self.source = source # Starting airport
-        self.destination = destination # next airport
-
-# First flight: Source = None
-# Final flight: destination = None, has a source
-
-# Hash each ticket such that:
-    #   cache[source] = destination
-
-    #   thereby, the ith location (source) can be found by checking cache[i-1]
-import random
+        self.source = source
+        self.destination = destination
 
 def reconstruct_trip(tickets, length):
     """
@@ -35,31 +27,3 @@ def reconstruct_trip(tickets, length):
                 counter += 1
 
     return final_route
-
-# DCA
-# DCA
-# PDX
-# DCA
-# NONE
-# DCA
-# DCA
-# NONE
-# PDX
-# DCA
-# NONE
-# NONE
-# DCA
-# DCA
-# PDX
-# DCA
-# DCA
-# NONE
-# NONE
-# NONE
-# DCA
-# PDX
-# DCA
-# PDX
-# DCA
-# DCA
-# DCA
