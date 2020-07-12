@@ -32,7 +32,7 @@ def get_indices_of_item_weights(weights, length, limit):
             value = cache[(limit - weight)]
             final_arr.append(value)
         # if cache value already used, drop it from cache
-            del cache[(limit - weight)]
+            # del cache[(limit - weight)]
             
     # return cache.keys for those items (as a tuple, sorted)
     sorted_arr = sorted(final_arr, reverse=True)
