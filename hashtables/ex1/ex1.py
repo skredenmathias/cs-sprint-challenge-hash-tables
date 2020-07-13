@@ -18,35 +18,25 @@ def get_indices_of_item_weights(weights, length, limit):
     YOUR CODE HERE
     """
     cache = {}
-    final_arr = []
-    # naive solution:
-    for i in range(length):
-        weight = weights[i]
-        cache[weight] = i
+    arr = []
 
-    # search through cache.values
-    # if any two add up to LIMIT, 
     for i in range(length):
         weight = weights[i]
+
         if (limit - weight) in cache:
             value = cache[(limit - weight)]
-            final_arr.append(value)
-        # if cache value already used, drop it from cache
-            # del cache[(limit - weight)]
+            arr.append(value)
+            arr.append(i)
+        else:
+            cache[weight] = i
             
     # return cache.keys for those items (as a tuple, sorted)
-    sorted_arr = sorted(final_arr, reverse=True)
+    sorted_arr = sorted(arr, reverse=True)
     tuple_arr = tuple(sorted_arr)
     print(tuple_arr)
     if tuple_arr == ():
         return None
     return tuple_arr
-
-
-
-
-        # weights_4 = [12, 6, 7, 14, 19, 3, 0, 25, 40]
-        # answer_4 = get_indices_of_item_weights(weights_4, 9, 7)
 
 
 
